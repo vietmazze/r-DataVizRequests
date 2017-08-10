@@ -87,6 +87,7 @@ ggplot(test,aes(hour(datetime)))+
   facet_grid(paste("year",Year)~paste("semester",Semester))+
   theme_bw()
 
+![alt text](https://github.com/vietmazze/r-DataVizRequests/blob/master/graph1%20essay%20project.jpeg "Histogram")
 
 
 ggplot(test,aes(y=hour(datetime),x=Year,group=Semester))+
@@ -95,3 +96,4 @@ ggplot(test,aes(y=hour(datetime),x=Year,group=Semester))+
   labs(title="Summary of time used the most to do essay",x="Year",y="Hour")+
   theme_bw()
 ```
+![alt text](https://github.com/vietmazze/r-DataVizRequests/blob/master/boxplot%20for%20essay%20project.jpeg "Boxplot")
