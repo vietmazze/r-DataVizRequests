@@ -2,7 +2,7 @@
 title: "Essay Graphs for r/Datavizrequest user"
 author: "Duy Nguyen"
 date: "August 10, 2017"
-output: pdf_document
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -18,9 +18,8 @@ library(chron)
 ```{r import,cache=TRUE}
 test<-read_excel("Undergrad Essays Written.xlsx",1,col_names=FALSE,skip=1)
 
-
+head(test)
 ```
-
 ##Fixing the data
 ```{r fix,results = "hide", cache=TRUE}
 colnames(test)<-c("Year","Date","Time")
@@ -57,6 +56,9 @@ test<-as.tibble(test, na.rm=TRUE)
 
 ```
 
+```{r data}
+head(test)
+```
 
 ##Converting to datetime variable
 ```{r time}
@@ -74,11 +76,9 @@ test$datetime<-parse_datetime(test$datetime,"%Y-%m-%d %H:%M:%S")
 # Looking at tidy data
 ```{r data2}
 knitr::kable(
- test , 
-  caption = "Essay"
-)
+ test, 
+ caption = "A knitr kable.")
 ```
-
 
 #Graphing histogram and boxplot for data
 
@@ -88,14 +88,12 @@ ggplot(test,aes(hour(datetime)))+
   labs(title="Essays", x="Hour",y="Number",caption="created by DQN")+
   facet_grid(paste("year",Year)~paste("semester",Semester))+
   theme_bw()
-```
-![alt text](https://github.com/vietmazze/r-DataVizRequests/blob/master/graph1%20essay%20project.jpeg "Histogram")
 
-```{r graphing1}
+
+
 ggplot(test,aes(y=hour(datetime),x=Year,group=Semester))+
   geom_boxplot(color="blue")+
   facet_grid(paste("year",Year)~paste("semester",Semester))+
   labs(title="Summary of time used the most to do essay",x="Year",y="Hour")+
   theme_bw()
 ```
-![alt text](https://github.com/vietmazze/r-DataVizRequests/blob/master/boxplot%20for%20essay%20project.jpeg "Boxplot")
