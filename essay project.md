@@ -18,8 +18,9 @@ library(chron)
 ```{r import,cache=TRUE}
 test<-read_excel("Undergrad Essays Written.xlsx",1,col_names=FALSE,skip=1)
 
-head(test)
+
 ```
+
 ##Fixing the data
 ```{r fix,results = "hide", cache=TRUE}
 colnames(test)<-c("Year","Date","Time")
@@ -56,9 +57,6 @@ test<-as.tibble(test, na.rm=TRUE)
 
 ```
 
-```{r data}
-head(test)
-```
 
 ##Converting to datetime variable
 ```{r time}
@@ -75,8 +73,12 @@ test$datetime<-parse_datetime(test$datetime,"%Y-%m-%d %H:%M:%S")
 
 # Looking at tidy data
 ```{r data2}
-test
+knitr::kable(
+ test , 
+  caption = "Essay"
+)
 ```
+
 
 #Graphing histogram and boxplot for data
 
