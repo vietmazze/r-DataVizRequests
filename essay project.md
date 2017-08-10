@@ -86,10 +86,10 @@ ggplot(test,aes(hour(datetime)))+
   labs(title="Essays", x="Hour",y="Number",caption="created by DQN")+
   facet_grid(paste("year",Year)~paste("semester",Semester))+
   theme_bw()
-
+```
 ![alt text](https://github.com/vietmazze/r-DataVizRequests/blob/master/graph1%20essay%20project.jpeg "Histogram")
 
-
+```{r graphing1}
 ggplot(test,aes(y=hour(datetime),x=Year,group=Semester))+
   geom_boxplot(color="blue")+
   facet_grid(paste("year",Year)~paste("semester",Semester))+
