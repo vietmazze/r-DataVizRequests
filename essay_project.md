@@ -223,7 +223,7 @@ ggplot(test,aes(hour(datetime)))+
   theme_bw()
 ```
 
-![](essay_project_files/figure-markdown_github-ascii_identifiers/graphing-1.png)
+![](https://github.com/vietmazze/r-DataVizRequests/blob/master/graphing-1.png)
 
 ``` r
 ggplot(test,aes(y=hour(datetime),x=Year,group=Semester))+
@@ -233,4 +233,4 @@ ggplot(test,aes(y=hour(datetime),x=Year,group=Semester))+
   theme_bw()
 ```
 
-![](essay_project_files/figure-markdown_github-ascii_identifiers/graphing-2.png)
+![](https://github.com/vietmazze/r-DataVizRequests/blob/master/graphing-2.png)
