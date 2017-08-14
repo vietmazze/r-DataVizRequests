@@ -3,7 +3,7 @@ Algae growth
 Duy Nguyen
 August 14, 2017
 
-#A project for a user on r/Datavizrequests regarding Algae growth base on light intensity and temperature.
+A project for a user on r/Datavizrequests regarding Algae growth base on light intensity and temperature.
 
 
 Reading excel file
