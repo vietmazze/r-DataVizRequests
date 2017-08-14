@@ -94,4 +94,4 @@ ggplot(data1,aes(x=temperature,y=growth,color=data1$`Light_ Intensity `))+
 
     ## Warning: Removed 1 rows containing missing values (geom_point).
 
-![](Algae_growth_files/figure-markdown_github-ascii_identifiers/pressure-1.png)
+![](https://github.com/vietmazze/r-DataVizRequests/blob/master/pressure-1.png)
